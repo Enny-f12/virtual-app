@@ -3,37 +3,48 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --surface: #f7f7f8;
-  --surface-hover: #eef0f2;
-  --border: #e5e7eb;
-  --muted: #6b7280;
-  --primary: #0e7c7b;
-  --primary-foreground: #ffffff;
-  --accent: #1f3b57;
+  /* page */
+  --background: #F7F7F4;
+  --foreground: #0B1220;
+  --muted: #5B6472;
+  --border: #E7E7E1;
+  --surface: #FFFFFF;
+  --surface-hover: #F1F1EC;
+  --header-bg: rgba(247, 247, 244, 0.85);
+
+  /* brand — constant across themes */
+  --primary: #FF8A1E;
+  --primary-deep: #FF6A00;
+  --primary-foreground: #0B1220;
+  --accent: #0F9E8E;
+
+  /* fixed-dark elements: phone mockup, stats band — always dark by design, don't flip */
+  --surface-invert: #0B1220;
+  --surface-invert-soft: #111C2E;
+  --surface-invert-hover: #161F30;
+  --surface-invert-foreground: #E5E7EB;
+  --surface-invert-muted: #8B93A7;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --surface: #161616;
-  --surface-hover: #1f1f1f;
-  --border: #2a2a2a;
-  --muted: #9a9a9a;
-  --primary: #14b8a6;
-  --primary-foreground: #05201f;
-  --accent: #7dd3fc;
+  --background: #0A0A0A;
+  --foreground: #EDEDED;
+  --muted: #9AA3B2;
+  --border: #262B36;
+  --surface: #12141A;
+  --surface-hover: #191C24;
+  --header-bg: rgba(10, 10, 10, 0.85);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
   --color-surface: var(--surface);
   --color-surface-hover: var(--surface-hover);
-  --color-border: var(--border);
-  --color-muted: var(--muted);
   --color-primary: var(--primary);
+  --color-primary-deep: var(--primary-deep);
   --color-primary-foreground: var(--primary-foreground);
   --color-accent: var(--accent);
   --font-sans: var(--font-inter);
