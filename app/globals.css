@@ -56,3 +56,34 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Zapa homepage utilities */
+.zapa-num { font-family: var(--font-space-grotesk), sans-serif; }
+.zapa-serif { font-family: var(--font-fraunces), serif; font-style: italic; font-weight: 500; }
+
+@keyframes zapa-float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+.zapa-float { animation: zapa-float 4s ease-in-out infinite; }
+
+@keyframes zapa-glow {
+  0%,100% { box-shadow: 0 30px 60px -20px rgba(255,138,30,0.22); }
+  50% { box-shadow: 0 30px 70px -15px rgba(255,138,30,0.38); }
+}
+.zapa-glow { animation: zapa-glow 3.5s ease-in-out infinite; }
+
+.zapa-tap { transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease; }
+.zapa-tap:hover { opacity: 0.92; }
+.zapa-tap:active { transform: scale(0.97); }
+
+.zapa-tile { transition: transform 0.35s cubic-bezier(.2,.8,.2,1); }
+.zapa-tile:hover { transform: translateY(-4px); }
+.zapa-tile:hover .zapa-tile-img { transform: scale(1.06); }
+.zapa-tile-img { transition: transform 0.6s ease; }
+
+.zapa-field { transition: border-color 0.15s ease, box-shadow 0.15s ease; }
+.zapa-field:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 18%, transparent);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
